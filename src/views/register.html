@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%=title%></title>
+  </head>
+<body>
+ <%- include partials/nav.html %>
+
+  <form action="/account/register" method="POST">
+    <h3>Register</h3>
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email" />
+    </div>
+     <div>
+      <label>Password:</label>
+      <input type="password" name="password" />
+    </div>
+    <div>
+      <input type="submit" value="Register" />
+    </div>
+  </form>
+</body>
+</html>

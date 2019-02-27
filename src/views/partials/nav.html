@@ -1,0 +1,10 @@
+<% if(!account) {%>
+<a href="/account/register">register</a>
+<a href="/account/login">Login</a>
+<% } else {%>
+ <%=  account.user ? account.user.name : account.email %>
+ <form style="display: inline-block;" action="/account/logout" method="POST"><input type="submit" value="Logout"></form>
+<% }%>
+<% for(var m of messages) { %>
+    <div class="flash"><%= m %></div>
+<% } %>
